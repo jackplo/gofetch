@@ -85,8 +85,10 @@ int main() {
     std::string memory = getMemory();
 
     std::cout << "\n";
+ 
+    std::string test = boost::str( boost::format(" user ::%|5|%|20| ") % user % kernel);
 
-    std::string whoop =
+    std::string fetch =
                  "       .---.           \n"
                  "      /     \\         " " user   :: " + user + "\n"
                  "      \\.@-@./         " " dist   :: " + dist + "\n"
@@ -96,7 +98,7 @@ int main() {
                  "   /`\\_`>  <_/ \\      " "󰽙 memory :: " + memory + "\n"
                  "   \\__/'---'\\__/     ";
 
-    std::cout << color(whoop, 33) << std::endl;
+    std::cout << color(fetch, 33) << std::endl;
     std::cout << "\n";
 
     return 0;
